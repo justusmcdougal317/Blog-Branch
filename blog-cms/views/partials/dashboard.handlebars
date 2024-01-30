@@ -1,0 +1,17 @@
+<h2>Dashboard</h2>
+
+{{#if userPosts.length}}
+  {{#each userPosts}}
+    <div class="user-post">
+      <h3>{{title}}</h3>
+      <p>{{content}}</p>
+      <p>Created on {{formatDate createdAt}}</p>
+      <a href="/blog/edit/{{id}}">Edit</a>
+      <a href="/blog/delete/{{id}}">Delete</a>
+    </div>
+  {{/each}}
+{{else}}
+  <p>You haven't created any posts yet. Get started!</p>
+{{/if}}
+
+<a href="/blog/new">Add a New Blog Post</a>

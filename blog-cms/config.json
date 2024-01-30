@@ -1,0 +1,8 @@
+{
+    "development": {
+      "username": "root",
+      "password": "Armoredtruck7!",
+      "database": "blog_cms_db",
+      "host": "localhost",
+      "dialect": "mysql"
+    },

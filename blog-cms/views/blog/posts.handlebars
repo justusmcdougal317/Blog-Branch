@@ -1,0 +1,10 @@
+{{!< layouts/blogs}}
+
+<h1>All Blog Posts</h1>
+
+{{#each blogPosts}}
+  <div class="blog-post">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+  </div>
+{{/each}}

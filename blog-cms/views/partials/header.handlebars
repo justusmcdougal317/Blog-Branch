@@ -1,0 +1,14 @@
+<header>
+    <h1>My Blog</h1>
+    <nav>
+        {{#if currentUser}}
+            <a href="/blog/auth/homepage">Homepage</a>
+            <a href="/blog/dashboard">Dashboard</a>
+            <a href="/blog/logout">Logout</a>
+        {{else}}
+            <a href="/blog/auth/homepage">Homepage</a>
+            <a href="/blog/auth/signup">Sign Up</a>
+            <a href="/blog/auth/login">Log In</a>
+        {{/if}}
+    </nav>
+</header>

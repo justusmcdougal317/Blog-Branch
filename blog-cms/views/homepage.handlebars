@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        {{#if currentUser}}
+            <a href="/blog/homepage">Homepage</a>
+            <a href="/blog/dashboard">Dashboard</a>
+            <a href="/blog/logout">Logout</a>
+        {{else}}
+            <a href="/blog/homepage">Homepage</a>
+            <a href="/blog/signup">Sign Up</a>
+            <a href="/blog/login">Log In</a>
+        {{/if}}
+    </nav>
+
+    <!-- Display existing blog posts -->
+    <section>
+        <h2>Existing Blog Posts</h2>
+        {{#each blogPosts}}
+            <div class="blog-post">
+                <h3>{{title}}</h3>
+                <p>{{content}}</p>
+                <p>Posted by {{username}} on {{createdAt}}</p>
+                <!-- Add more details or actions as needed -->
+            </div>
+        {{/each}}
+    </section>
+
+    <!-- Other content and features go here -->
+
+</body>
+</html>
